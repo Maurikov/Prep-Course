@@ -9,24 +9,23 @@ function obtenerMayor(x, y) {
   if (x > y) {
     return x;
   }
-  if (x < y ) {
+  if (x < y) {
     return y;
   }
   return x;
 
-// solucion henry - ok
+  // solucion henry - ok
   // if(x > y) {
   //   return x;
   // }
   // return y;
 
-// mi otra solucion - not found
+  // mi otra solucion - not found
   // if (x > y) {
   //   return x;
   // } else if (x === y) {
   //   return y;
-  // } 
-
+  // }
 }
 
 function mayoriaDeEdad(edad) {
@@ -34,27 +33,24 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18) {
-    return "Allowed"
-  } 
-  else {
-    return "Not allowed"
+    return "Allowed";
+  } else {
+    return "Not allowed";
   }
 }
-  
+
 function conection(status) {
-  //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
+  //Recibimos un estado de conexión de un usuario representado por un valor numérico.
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
-    return "Online"
-  } 
-  else if (status === 2) {
-    return "Away"
-  } 
-  else {
-    return "Offline"
+    return "Online";
+  } else if (status === 2) {
+    return "Away";
+  } else {
+    return "Offline";
   }
 }
 
@@ -66,24 +62,21 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
 
-  var
-    bandera = 0;
+  var bandera = 0;
 
   if (idioma === "aleman") {
-    return "Guten Tag!"
-  } 
-  else if (idioma === "mandarin" ) {
-    return "Ni Hao!"
-  } 
-  else if (idioma === "ingles") {
-    return "Hello!"
-  } 
+    return "Guten Tag!";
+  } else if (idioma === "mandarin") {
+    return "Ni Hao!";
+  } else if (idioma === "ingles") {
+    return "Hello!";
+  }
   // else if (idioma === undefined || (idioma !== "aleman" && idioma !== "mandarin" && idioma !== "ingles")) {
-    else if (idioma === undefined || bandera === 0) {
-    return "Hola!"
+  else if (idioma === undefined || bandera === 0) {
+    return "Hola!";
   }
 
-// solucion henry - ok
+  // solucion henry - ok
   // if(idioma === 'aleman') {
   //   return 'Guten Tag!';
   // } else if (idioma === 'mandarin') {
@@ -127,22 +120,20 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero === 10 || numero === 5) {
-    return true;    
-  } 
-  else {
+    return true;
+  } else {
     return false;
   }
 
-// solucion henry - ok
+  // solucion henry - ok
   // return numero === 10 || numero === 5;
-
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero < 50 && numero > 20;   
+  return numero < 50 && numero > 20;
 }
 
 function esEntero(numero) {
@@ -155,15 +146,14 @@ function esEntero(numero) {
   // Tu código:
   if (Math.floor(numero) < numero) {
     return false;
-  } 
-  else {
+  } else {
     return true;
   }
 
-// solucion Henry:
+  // solucion Henry:
   // return numero % 1 === 0;
 
-// otras soluciones
+  // otras soluciones
   // return !(Math.floor(numero) < numero)
   // return (Math.floor(numero) >= numero)
 }
@@ -176,42 +166,69 @@ function fizzBuzz(numero) {
 
   if (numero % 3 === 0 && numero % 5 === 0) {
     return "fizzbuzz";
-  } 
-  else if (numero % 5 === 0) {
+  } else if (numero % 5 === 0) {
     return "buzz";
-  } 
-  else if (numero % 3 === 0) {
+  } else if (numero % 3 === 0) {
     return "fizz";
-  } 
-  else {
-    return numero
+  } else {
+    return numero;
   }
+
+  // not found - revisar porque
+  // switch (numero) {
+  //   case numero % 15 === 0:
+  //     return "fizzbuzz";
+
+  //   case numero % 3 === 0:
+  //     return "fizz";
+
+  //   case numero % 5 === 0:
+  //     return "buzz";
+
+  //   default:
+  //     return false;
+  // }
 }
 
 function operadoresLogicos(num1, num2, num3) {
-  //La función recibe tres números distintos. 
+  //La función recibe tres números distintos.
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
 
   if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
-  } 
-  else if (num1 === 0 || num2 === 0 || num3 === 0) {
+  } else if (num1 === 0 || num2 === 0 || num3 === 0) {
     return "Error";
-  } 
-  else if (num1 > num2 && num1 > num3 && num1 > 0) {
+  } else if (num1 > num2 && num1 > num3 && num1 > 0) {
     return "Número 1 es mayor y positivo";
-  } 
-  else if (num3 > num2 && num3 > num1) {
+  } else if (num3 > num2 && num3 > num1) {
     num3++;
     return num3;
-  } 
-  else {
+  } else {
     return false;
   }
+
+  // not found - revisar porque
+   // switch ((num1, num2, num3)) {
+   //    case (num1 > num2) && (num1 > num3) && (num1 > 0):
+   //       return "Numero 1 es mayor y positivo";
+   //       break;
+   //    case (num1 < 0) || (num2 < 0) || (num3 < 0):
+   //       return "Hay negativos";
+
+   //    case (num3 > num1) && (num3 > num2):
+   //       num3 = num3 + 1;
+   //       return num3;
+
+   //    case (num3 === 0) && (num2 === 0) && (num1 === 0):
+   //       return "Error";
+   //    default:
+   //       return false;
+   //       break;
+   // }
 }
 
 function esPrimo(numero) {
@@ -223,11 +240,9 @@ function esPrimo(numero) {
 
   if (numero === 0 || numero === 1) {
     return false;
-  } 
-  else if (numero === 2) {
+  } else if (numero === 2) {
     return true;
-  } 
-  else {
+  } else {
     for (i = 2; i <= numero - 1; i++) {
       if (numero % i === 0) {
         return false;
@@ -237,22 +252,21 @@ function esPrimo(numero) {
   }
 }
 
-function esVerdadero(valor){
-  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
+function esVerdadero(valor) {
+  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor) {
     return "Soy verdadero";
-  } 
-  else if (!(valor)) {
+  } else if (!valor) {
     return "Soy falso";
   }
 }
 
-function tablaDelSeis(){
+function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí
   let a = [];
   for (let i = 0; i < 11; i++) {
     // a[index] = 6 * index;
@@ -261,13 +275,12 @@ function tablaDelSeis(){
   return a;
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   if (100 <= numero && numero <= 999) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
@@ -281,12 +294,11 @@ function doWhile(numero) {
 
   do {
     numero = numero + 5;
-    limite++;  
+    limite++;
   } while (limite < 8);
-  
+
   return numero;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -306,5 +318,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
+  doWhile,
 };

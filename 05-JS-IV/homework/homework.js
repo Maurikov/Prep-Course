@@ -74,6 +74,8 @@ function tieneEmail (usuario) {
     return true
   }
   return false
+
+  // return !!usuario.email
 }
 
 function tienePropiedad (objeto, propiedad) {
