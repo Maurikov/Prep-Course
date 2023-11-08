@@ -156,6 +156,9 @@ function esEntero(numero) {
   // otras soluciones
   // return !(Math.floor(numero) < numero)
   // return (Math.floor(numero) >= numero)
+
+  // if (Number.isInteger(numero) === true) return true;
+  // return false;
 }
 
 function fizzBuzz(numero) {
@@ -173,6 +176,12 @@ function fizzBuzz(numero) {
   } else {
     return numero;
   }
+
+  /* TAMBIEN OK */
+  // if (numero % 3 === 0 && numero % 5 === 0) return "fizzbuzz";
+  // else if (numero % 5 === 0) return "buzz";
+  // else if (numero % 3 === 0) return "fizz";
+  // return numero;
 
   // not found - revisar porque
   // switch (numero) {
