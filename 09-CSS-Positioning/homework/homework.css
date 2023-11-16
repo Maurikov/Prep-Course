@@ -1,38 +1,76 @@
 /*
-Lección 3: Tarea de posicionamiento con CSS. Todo el trabajo debe hacerse en este archivo, por lo que si estás tocando cualquier otro
+Lección 3: Tarea de posicionamiento con CSS. Todo el trabajo debe hacerse en este archivo,
+por lo que si estás tocando cualquier otro
 archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 */
 
 /* Ejercicio 1: Centrar el texto en un span */
 
 /* Arrancaremos este ejercicio por vos: */
+/* el elemento es un span (es inline) */
 #ejercicioUno {
-
+    display: block;
+    text-align: center;
 }
 
 
 /* Ejercicio 2: Posicionar el header */
 
 /* Acá va tu código */
-
+/* el elemento es un h1 (es block) */
+#ejercicioDos {
+    display: none;  /* elimina el h1 de la pagina
+    /* visibility: hidden; */   /* oculta el h1 en la pagina */
+}
 
 
 /* Ejercicio 3: */
 
 /* Acá va tu código */
-
+/* el elemento es un img (es inline) */
+#ejercicioTres {
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
 
 
 /* Ejercicio 4: */
 
 /* Acá va tu código */
-
+/* el elemento es un div (es un block) */
+#ejercicioCuatro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: block; */
+}
 
 
 /* Ejercicio 5: */
 
 /* Acá va tu código */
-
+/* el elemento es un div (es un block) */
+#ejercicioCinco {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     
+}
 
 
 /* Ejercicio 6. */
+#ejercicioCinco {
+    flex-direction: row-reverse;
+}
+
+
+/* Ejercicio 7. */
+#ejercicioSiete {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    align-self:flex-end;
+    flex-direction: column-reverse;
+
+}
